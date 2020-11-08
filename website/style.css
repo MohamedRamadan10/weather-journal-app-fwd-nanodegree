@@ -1,0 +1,154 @@
+/* Custom */
+#app {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+#app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2) url(https://wallpapercave.com/wp/Z4CD0Ic.jpg)
+    no-repeat center center/cover;
+  filter: blur(4px);
+  z-index: 1;
+}
+.weather-app {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+.weather-app .right {
+  height: 100%;
+}
+.weather-app .right .card {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  padding: 30px 20px;
+  color: #fff;
+}
+.weather-app .right .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  z-index: -1;
+}
+label {
+  width: 100%;
+  margin-bottom: 15px;
+}
+input,
+textarea {
+  width: 100%;
+  border-radius: 50px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid transparent;
+  transition: 0.3s all ease-in-out;
+  margin-bottom: 30px;
+  color: #fff;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+textarea {
+  border-radius: 15px;
+  min-height: 150px;
+  resize: none;
+}
+.center {
+  text-align: center;
+}
+button[type="submit"] {
+  min-width: 150px;
+  margin: 0 auto;
+  padding: 15px 0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: #129cf3;
+}
+button[type="submit"]:focus {
+  outline: none;
+}
+.entry .card2 {
+  padding: 30px;
+  color: #fff;
+}
+#temp {
+  font-size: 7rem;
+}
+#date {
+  margin-bottom: 30px;
+}
+#date,
+#content {
+  font-size: 1.2rem;
+}
+#entryHolder {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  z-index: 3;
+}
+@media (max-width: 991px) {
+  .weather-app .right {
+    max-width: 80%;
+    margin: 80px auto 50px;
+    height: auto;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  #entryHolder {
+    max-width: 80%;
+    margin: 0 auto;
+    height: auto;
+    min-height: auto;
+  }
+
+  #date,
+  #content {
+    font-size: 1.1rem;
+  }
+
+  #temp {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .weather-app .right {
+    max-width: 90%;
+    margin: 30px auto 30px;
+  }
+  #entryHolder {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #date,
+  #content {
+    font-size: 1.1rem;
+  }
+
+  #temp {
+    font-size: 3rem;
+  }
+}
